@@ -1,0 +1,6 @@
+# Created by .ignore support plugin (hsz.mobi)
+src/Main.java
+.DS_Store
+.idea/
+out/
+
