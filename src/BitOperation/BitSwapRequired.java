@@ -11,7 +11,7 @@ public class BitSwapRequired {
     public int bitSwapRequired(int a, int b) {
         int num = a ^ b;
         int count = 0;
-        while (true) {
+        for(;;) {
             if (num == 0) {
                 break;
             }
