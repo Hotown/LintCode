@@ -51,4 +51,27 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
             return get(key, root.right);
         }
     }
+
+    public void put(Node node) {
+        Node res = get(node.key);
+        if (res != null) {
+            res.value = node.value;
+            return;
+        } else {
+            put(node, root);
+        }
+    }
+
+    private void put(Node node, Node root) {
+        if (root == null) {
+            root = node;
+            return;
+        }
+
+        if (node.key.compareTo(root.key) < 0) {
+            put(node, root.left);
+        } else {
+            put(node, root.right);
+        }
+    }
 }
