@@ -121,7 +121,6 @@ public class RedBlackTree<Key extends Comparable<Key>, Value> {
         if (node == null) {
             return 0;
         }
-
         return node.n;
     }
 }
